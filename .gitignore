@@ -1,6 +1,6 @@
-/Gym-Foo-main
-
 rollerball_gym.py
 test_param.py
 
 /.vscode
+
+__pycache__
