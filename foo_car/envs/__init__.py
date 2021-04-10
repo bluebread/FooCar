@@ -1,1 +1,1 @@
-from foo_car.envs.foo_env import FooEnv
+from foo_car.envs.foo_car_env import FooCarEnv
