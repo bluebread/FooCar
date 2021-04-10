@@ -1,13 +1,12 @@
-"""
-Classic cart-pole system implemented by Rich Sutton et al.
-Copied from http://incompleteideas.net/sutton/book/code/pole.c
-permalink: https://perma.cc/C9ZM-652R
-"""
-
 import math
 import gym
 from gym import spaces, logger
 import numpy as np
+
+from gym_unity.envs import UnityToGymWrapper
+from mlagents_envs.environment import UnityEnvironment
+from mlagents_envs.base_env import ActionTuple
+from mlagents_envs.side_channel.environment_parameters_channel import EnvironmentParametersChannel
 
 
 class FooCarEnv(gym.Env):
