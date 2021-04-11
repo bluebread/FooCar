@@ -19,14 +19,16 @@ class FooCarEnv(gym.Env):
 
 	PathSpace = {
 		'xyz': 0,
-		'xy': 1,
+		'xy': 2,
+		'yz': 2,
 		'xz': 2
 	}
 
 	def __init__(self, no_graphics:bool=False, seed:int=1, **config):
 		self._config = config
 		self._unity_env = UnityEnvironment(
-			file_name=UNITY_ENV_EXE_FILE,  
+			file_name=UNITY_ENV_EXE_FILE,
+			# file_name=None, # Unity Editor Mode (debug)
 			no_graphics=no_graphics,
 			seed=seed, 
 			side_channels=[self._channel]
@@ -83,8 +85,7 @@ class FooCarEnv(gym.Env):
 		ticker_start = config['ticker_start'] if 'ticker_start' in config else -3
 
 		xyz_mode = (path_space == space['xyz'])
-		basic_num = 3 + (3 if xyz_mode else 2)
-		point_dim = 6 if xyz_mode else 4
+		basic_num = 6
+		point_dim = 3 if xyz_mode else 2
 
-		return basic_num + point_dim * (ticker_end - ticker_start + 1)
-
+		return basic_num + 2 * point_dim * (ticker_end - ticker_start + 1)

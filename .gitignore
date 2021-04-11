@@ -1,6 +1,4 @@
 # My gitignore
-rollerball_gym.py
-test_param.py
 tester.py
 
 /.vscode
