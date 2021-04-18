@@ -1,6 +1,7 @@
 import math
 from pathlib import Path
 from typing import Any, Dict, List, Tuple, Union
+from sys import platform
 
 import gym
 from gym import spaces, logger
@@ -10,6 +11,15 @@ from gym_unity.envs import UnityToGymWrapper
 from mlagents_envs.environment import UnityEnvironment
 from mlagents_envs.base_env import ActionTuple
 from mlagents_envs.side_channel.environment_parameters_channel import EnvironmentParametersChannel
+
+
+
+if platform == 'win32':
+	pass
+else if platform == 'darwin':
+	pass
+else: # Error
+	pass
 
 file_path = Path(__file__)
 UNITY_ENV_EXE_FILE = str(file_path.parents[1].joinpath('unity_env', 'FooCar.exe'))
