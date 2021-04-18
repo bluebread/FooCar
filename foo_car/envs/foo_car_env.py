@@ -12,17 +12,12 @@ from mlagents_envs.environment import UnityEnvironment
 from mlagents_envs.base_env import ActionTuple
 from mlagents_envs.side_channel.environment_parameters_channel import EnvironmentParametersChannel
 
+UNITY_ENV_EXE_FILE = ''
+FILE_PATH = Path(__file__)
+UNITY_ENV_EXE_FILE = FILE_PATH.parents[1].joinpath('unity_env', platform, 'FooCar')
 
-
-if platform == 'win32':
-	pass
-else if platform == 'darwin':
-	pass
-else: # Error
-	pass
-
-file_path = Path(__file__)
-UNITY_ENV_EXE_FILE = str(file_path.parents[1].joinpath('unity_env', 'FooCar.exe'))
+if platform not in ['win32', 'linux', 'darwin']:
+	quit() # Abort
 
 class FooCarEnv(gym.Env):
 	_channel = EnvironmentParametersChannel()
