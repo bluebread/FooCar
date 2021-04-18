@@ -1,6 +1,4 @@
 # My gitignore
-tester.py
-
 /.vscode
 
 # Byte-compiled / optimized / DLL files
