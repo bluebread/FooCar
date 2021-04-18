@@ -2,8 +2,9 @@
 
 Installation:
 
-    $ pip install gym
-    $ cd /gym-foo/..
+    $ pip install gym, gym_unity, numpy
+	$ python -m pip install mlagents==0.25.1
+    $ cd /FooCar/..
     $ pip install -e FooCar
 
 How to get the enviroment:
