@@ -14,9 +14,10 @@ from mlagents_envs.side_channel.environment_parameters_channel import Environmen
 
 UNITY_ENV_EXE_FILE = ''
 FILE_PATH = Path(__file__)
-UNITY_ENV_EXE_FILE = FILE_PATH.parents[1].joinpath('unity_env', platform, 'FooCar')
+UNITY_ENV_EXE_FILE = str(FILE_PATH.parents[1].joinpath('unity_env', platform, 'FooCar'))
 
 if platform not in ['win32', 'linux', 'darwin']:
+	print("FooCar: Platform (%s) is not supported." % (platform))
 	quit() # Abort
 
 class FooCarEnv(gym.Env):
