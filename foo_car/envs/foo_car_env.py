@@ -78,7 +78,19 @@ class FooCarEnv(gym.Env):
 
 	@property
 	def observation_space(self):
-		return self._observation_space
+		config = self._config
+		space = self.PathSpace
+
+		path_space = config['path_space'] if 'path_space' in config else space['xz']
+		r = config['radius_anchor_circle'] if 'radius_anchor_circle' in config else 8.0
+		r_e = config['radius_epsilon_ratio'] if 'radius_epsilon_ratio' in config else 0.7
+		h = config['max_anchor_height'] if 'max_anchor_height' in config else 1.0
+
+		xyz_mode = (path_space == space['xyz'])
+		bound = max(r * (1 + r_e), h if xyz_mode else 0)
+		shape = (self.observation_size,)
+		
+		return gym.spaces.Box(-bound, +bound, dtype=np.float32, shape=shape)
 		
 	@property
 	def observation_size(self):

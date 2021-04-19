@@ -25,11 +25,11 @@ def common_testcase():
 	}
 	env = gym.make('foo_car:foo-v0', no_graphics=False, **config)
 
-	for i_e in range(10):
+	for i_e in range(3):
 		obs = env.reset()
 		print(0)
 		print("\tobs:", obs)
-		for i in range(100):
+		for i in range(250):
 			env.render()
 			action = env.action_space.sample()
 			obs, reward, done, info = env.step([0.0, 0.0])
@@ -49,7 +49,7 @@ def parameters_testcase(config:dict):
 	obs = env.reset()
 	print(0)
 	print("\tobs:", obs)
-	for i in range(1000):
+	for i in range(10):
 		env.render()
 		action = env.action_space.sample()
 		obs, reward, done, info = env.step(action)
@@ -95,6 +95,6 @@ config = {
 }
 
 if __name__ == '__main__':
-	common_testcase()
-	# parameters_testcase(config)
+	# common_testcase()
+	parameters_testcase(config)
 	pass
