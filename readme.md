@@ -2,9 +2,7 @@
 
 Installation:
 
-    $ pip install gym, gym_unity, numpy
-	$ python -m pip install mlagents==0.25.1
-    $ cd /FooCar/..
+	$ git clone https://github.com/bluebread/FooCar.git
     $ pip install -e FooCar
 
 How to get the enviroment:
@@ -46,3 +44,5 @@ for i in range(100):
 		break
 env.close()
 ```
+
+NOTE: In Linux platform without GUI, 'no_graphics' (one of parameters of gym.make) MUST be 'True'.
