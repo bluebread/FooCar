@@ -2,6 +2,7 @@ import math
 from pathlib import Path
 from typing import Any, Dict, List, Tuple, Union
 from sys import platform
+import os
 
 import gym
 from gym import spaces, logger
@@ -19,6 +20,9 @@ UNITY_ENV_EXE_FILE = str(FILE_PATH.parents[1].joinpath('unity_env', platform, 'F
 if platform not in ['win32', 'linux', 'darwin']:
 	print("FooCar: Platform (%s) is not supported." % (platform))
 	quit() # Abort
+
+if platform == 'linux':
+	os.system("chmod -R 755 %s.x86_64" % (UNITY_ENV_EXE_FILE))
 
 class FooCarEnv(gym.Env):
 	_channel = EnvironmentParametersChannel()

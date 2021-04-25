@@ -1,1 +1,6 @@
 gym
+gym_unity
+numpy
+
+[:python_version >= "0.25.0"]
+mlagents

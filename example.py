@@ -23,13 +23,13 @@ def common_testcase():
 		# 'lossctrl_Xaxis_ratio': 0.7,      # default 1.0
 		# 'lossctrl_Zaxis_ratio': 0.3,      # default 1.0
 	}
-	env = gym.make('foo_car:foo-v0', no_graphics=False, **config)
+	env = gym.make('foo_car:foo-v0', no_graphics=True, **config)
 
-	for i_e in range(3):
+	for i_e in range(1):
 		obs = env.reset()
 		print(0)
 		print("\tobs:", obs)
-		for i in range(250):
+		for i in range(10):
 			env.render()
 			action = env.action_space.sample()
 			obs, reward, done, info = env.step([0.0, 0.0])
@@ -44,7 +44,7 @@ def common_testcase():
 	env.close()
 
 def parameters_testcase(config:dict):
-	env = gym.make('foo_car:foo-v0', no_graphics=False, **config)
+	env = gym.make('foo_car:foo-v0', no_graphics=True, **config)
 
 	obs = env.reset()
 	print(0)
@@ -95,6 +95,6 @@ config = {
 }
 
 if __name__ == '__main__':
-	# common_testcase()
-	parameters_testcase(config)
+	common_testcase()
+	# parameters_testcase(config)
 	pass
