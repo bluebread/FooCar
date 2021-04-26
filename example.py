@@ -26,10 +26,11 @@ def common_testcase():
 	env = gym.make('foo_car:foo-v0', no_graphics=True, **config)
 
 	for i_e in range(1):
+		start_time = time.time()
 		obs = env.reset()
 		print(0)
 		print("\tobs:", obs)
-		for i in range(10):
+		for i in range(100):
 			env.render()
 			action = env.action_space.sample()
 			obs, reward, done, info = env.step([0.0, 0.0])
@@ -41,6 +42,9 @@ def common_testcase():
 			if done:
 				print("Episode finished after {} timesteps".format(i+1))
 				break
+		cur_time = time.time()
+		print('fps: %f' % (100 / (cur_time - start_time)))
+
 	env.close()
 
 def parameters_testcase(config:dict):
