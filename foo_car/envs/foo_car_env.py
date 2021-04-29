@@ -36,12 +36,16 @@ class FooCarEnv(gym.Env):
 
 	def __init__(self, no_graphics:bool=False, seed:int=1, **config):
 		self._config = config
+		worker_id = 0
+		if 'worker_id' in config:
+			worker_id = config['worker_id']
 		self._unity_env = UnityEnvironment(
 			file_name=UNITY_ENV_EXE_FILE,
 			# file_name=None, # Unity Editor Mode (debug)
 			no_graphics=no_graphics,
 			seed=seed, 
-			side_channels=[self._channel]
+			side_channels=[self._channel],
+			worker_id=worker_id
 		)
 		for key, value in config.items():
 			self._channel.set_float_parameter(key, float(value))

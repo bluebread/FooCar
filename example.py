@@ -4,6 +4,8 @@ import time
 import gym
 
 from foo_car.envs.foo_car_env import FooCarEnv
+import time
+
 
 def common_testcase():
 	config = {
@@ -23,17 +25,31 @@ def common_testcase():
 		# 'lossctrl_Xaxis_ratio': 0.7,      # default 1.0
 		# 'lossctrl_Zaxis_ratio': 0.3,      # default 1.0
 	}
+	config['worker_id'] = 1
 	env = gym.make('foo_car:foo-v0', no_graphics=True, **config)
+	config['worker_id'] = 2
+	env2 = gym.make('foo_car:foo-v0', no_graphics=True, **config)
 
-	for i_e in range(1):
-		start_time = time.time()
+	# env = gym.make('Hopper-v2')
+	current_time = time.time()
+	start_time = current_time
+	origin_time = time.time()
+	total_count = 0
+	for i_e in range(100):
+		# start_time = time.time()
 		obs = env.reset()
 		print(0)
 		print("\tobs:", obs)
 		for i in range(100):
-			env.render()
+			current_time = time.time()
+			time_interval = current_time - start_time
+			total_time = current_time - origin_time
+			start_time =  current_time
+			print(f'time interval: {time_interval}, fps: {1 / time_interval}, till now: {total_time}, aver. fps: {total_count / total_time}')
+			total_count += 1
+			# env.render()
 			action = env.action_space.sample()
-			obs, reward, done, info = env.step([0.0, 0.0])
+			obs, reward, done, info = env.step(action)
 			print("%d-%d:" % (i_e, i))
 			print("\taction:", action)
 			print("\tobs:", obs)
