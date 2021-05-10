@@ -13,18 +13,21 @@ from mlagents_envs.environment import UnityEnvironment
 from mlagents_envs.base_env import ActionTuple
 from mlagents_envs.side_channel.environment_parameters_channel import EnvironmentParametersChannel
 
-UNITY_ENV_EXE_FILE = ''
-FILE_PATH = Path(__file__)
-UNITY_ENV_EXE_FILE = str(FILE_PATH.parents[1].joinpath('unity_env', platform, 'FooCar'))
+def get_exe_file_path(agent_type:str):
+	UNITY_ENV_EXE_FILE = ''
+	FILE_PATH = Path(__file__)
+	UNITY_ENV_EXE_FILE = str(FILE_PATH.parents[1].joinpath('unity_env', agent_type, platform, 'FooCar'))
 
-if platform not in ['win32', 'linux', 'darwin']:
-	print("FooCar: Platform (%s) is not supported." % (platform))
-	quit() # Abort
+	if platform not in ['win32', 'linux', 'darwin']:
+		print("FooCar: Platform (%s) is not supported." % (platform))
+		quit() # Abort
 
-if platform == 'linux':
-	os.system("chmod -R 755 %s.x86_64" % (UNITY_ENV_EXE_FILE))
+	if platform == 'linux':
+		os.system("chmod -R 755 %s.x86_64" % (UNITY_ENV_EXE_FILE))
+	
+	return UNITY_ENV_EXE_FILE
 
-class FooCarEnv(gym.Env):
+class FooEnv(gym.Env):
 	_channel = EnvironmentParametersChannel()
 
 	PathSpace = {
@@ -34,13 +37,11 @@ class FooCarEnv(gym.Env):
 		'xz': 2
 	}
 
-	def __init__(self, no_graphics:bool=False, seed:int=1, **config):
+	def __init__(self, file_name, no_graphics:bool=False, seed:int=1, config:dict={}):
 		self._config = config
 		worker_id = config['worker_id'] if 'worker_id' in config else 0
-		# if 'worker_id' in config:
-		# 	worker_id = config['worker_id']
 		self._unity_env = UnityEnvironment(
-			file_name=UNITY_ENV_EXE_FILE,
+			file_name=file_name,
 			# file_name=None, # Unity Editor Mode (debug)
 			no_graphics=no_graphics,
 			seed=seed, 
