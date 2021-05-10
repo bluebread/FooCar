@@ -24,6 +24,9 @@ def get_exe_file_path(agent_type:str):
 
 	if platform == 'linux':
 		os.system("chmod -R 755 %s.x86_64" % (UNITY_ENV_EXE_FILE))
+	if platform == 'darwin':
+		exe_file = os.path.join(UNITY_ENV_EXE_FILE + ".app", "Contents", "MacOS", "FooCar")
+		os.system("chmod -R 755 %s" % exe_file)
 	
 	return UNITY_ENV_EXE_FILE
 
