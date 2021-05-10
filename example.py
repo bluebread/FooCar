@@ -65,17 +65,19 @@ def common_testcase():
 
 def parameters_testcase(config:dict):
 	env = gym.make('foo_car:foo-ball-v0', no_graphics=False, **config)
+	# env = gym.make('foo_car:foo-vehicle-v0', no_graphics=False, **config)
 
-	for i_e in range(10):
+	for i_e in range(3):
+		print(i_e)
 		obs = env.reset()
-		print(0)
-		print("\tobs:", obs)
-		for i in range(100):
+		# print(0)
+		# print("\tobs:", obs)
+		for i in range(10000):
 			env.render()
 			action = env.action_space.sample()
-			obs, reward, done, info = env.step(action)
+			obs, reward, done, info = env.step([0,1])
 			print("%d:" % i)
-			print("\tobs:", obs)
+			# print("\tobs:", obs)
 			print("\treward:", reward)
 			if done:
 				break

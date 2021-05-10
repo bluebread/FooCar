@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Data/Managed/Assembly-CSharp.dll</key>
 		<data>
-		zqeTE51Qs4oUq/IshKeJ336stP8=
+		pYkRwYGhNKmGOMpx/cUom2zEPvQ=
 		</data>
 		<key>Resources/Data/Managed/Google.Protobuf.dll</key>
 		<data>
@@ -458,15 +458,15 @@
 		</data>
 		<key>Resources/Data/globalgamemanagers</key>
 		<data>
-		4L7bgjgLM0vy2uYWLwM8u/Zil1Y=
+		8nyGxyLEg4KeUL0znklOyCER//o=
 		</data>
 		<key>Resources/Data/globalgamemanagers.assets</key>
 		<data>
-		qwv9cLG960gNyv0ojyyXJ1Ct8WA=
+		5lExNer2BWTw3aFsNkfF2auycS4=
 		</data>
 		<key>Resources/Data/level0</key>
 		<data>
-		qjX9z/N19WzNB3yEgC/QThk+8Wg=
+		CvS1Bp5Ni0mMT26jUcwt1TZczJo=
 		</data>
 		<key>Resources/Data/level0.resS</key>
 		<data>
@@ -482,7 +482,7 @@
 		</data>
 		<key>Resources/Data/sharedassets0.assets</key>
 		<data>
-		egMjcgn9sp7g8CxgmbI9CJ9UN8w=
+		p/lvukHxiLmokqftVbDsskTNZiw=
 		</data>
 		<key>Resources/DefaultPreferences.plist</key>
 		<data>
@@ -660,10 +660,10 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			PKPJldGf5J+vxn6Usq30vuob+Qo=
+			k/ZhIpF4Gu9mi5jV/5HHwQg7FGc=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"3ca3c995d19fe49fafc67e94b2adf4beea1bf90a"</string>
+			<string>cdhash H"93f6612291781aef668b98d5ff91c7c1083b1467"</string>
 		</dict>
 		<key>PlugIns/libgrpc_csharp_ext.x64.bundle</key>
 		<dict>
@@ -678,7 +678,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JsSyk/mfdZTJsbvAjOlIwprY/VDPwkOA0SBw7VlamjM=
+			eVXF/KVgZNFrvDxZ8BjSUXE71Eb+0Wc1VI3o3BlF84s=
 			</data>
 		</dict>
 		<key>Resources/Data/Managed/Google.Protobuf.dll</key>
@@ -1469,21 +1469,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Es91j6M3lwO3WJ7BURbYtx0xnZ8MIErFuuwuh2Ufbug=
+			Vmvu/ErOTaWJYmVlT2UNbEjr01gxamnlV3dHnSJ85Yk=
 			</data>
 		</dict>
 		<key>Resources/Data/globalgamemanagers.assets</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dl2KvhrlbSXBOhDEv8KNgdIDHdXSji3fu6lx0XUjxz4=
+			lNKdOTM4Zlbfl3PCZ485RUT/AGbswKpdzG1q0JoPKH0=
 			</data>
 		</dict>
 		<key>Resources/Data/level0</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HSsFJg3Ix9Eul5915DEdyoxsoxbB/5T4d/Zfw1dqhgA=
+			EfCMhuHcCdeTQOg1LJzTQl8U+LC0PkUtstHZ08STQwo=
 			</data>
 		</dict>
 		<key>Resources/Data/level0.resS</key>
@@ -1511,7 +1511,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PcIO0UvJG04ZjlVnQVzsMIgcn9+t+byuvC3pYc0kJ3s=
+			VoWiuF/V8xeLoepktuC8nzf2Chmy7HowU8gAtCIbulg=
 			</data>
 		</dict>
 		<key>Resources/DefaultPreferences.plist</key>
