@@ -85,13 +85,13 @@ def parameters_testcase(config:dict):
 
 config = {
     'num_anchors': 10,                 # default 10
-    'radius_anchor_circle': 8,      # default 8.0
-    'radius_epsilon_ratio': 0.5,      # default 0.7
-    'theta_epsilon_ratio':  0.5,      # default 0.7
-    # 'max_anchor_height': 2.0,         # default 1.0, only for 3d path
+    'radius_anchor_circle': 8,      # default 40.0
+    'radius_epsilon_ratio': 0.5,      # default 0.4
+    'theta_epsilon_ratio':  0.5,      # default 0.4
+    # 'max_anchor_height': 2.0,         # default 3.0, only for 3d path
     # 'max_anchor_angle': 0.0,          # default 15.0, only for 3d path
     # 'path_space': FooCarEnv.PathSpace['xyz'],            # default PathSpace.xz
-    'road_width': 1.0,                # default 1.0
+    'road_width': 1.0,                # default 5.0
     # 'agent_mass': 1.5,                # default 1.0
     # 'force_multiplier': 12,          # default 10
     # 'ticker_start': -4,                # default -3

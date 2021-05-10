@@ -34,7 +34,7 @@ config = {
     'failure_penalty': -150.0,
 }
 
-env = gym.make('foo_car:foo-v0', no_graphics=False, **config)
+env = gym.make('foo_car:foo-ball-v0', no_graphics=False, **config)
 obs = env.reset()
 for i in range(100):
 	env.render()
@@ -45,4 +45,7 @@ for i in range(100):
 env.close()
 ```
 
-NOTE: In Linux platform without GUI, 'no_graphics' (one of parameters of gym.make) MUST be 'True'.
+## NOTE
+
+1. In Linux platform without GUI, 'no_graphics' (one of parameters of gym.make) MUST be 'True'.
+2. In Vehicle enviroment, Friction & WindForce accidents DO NOT work at all. That is, 'LossControl' accident is the only accident that will affect the moving of the agent. 
