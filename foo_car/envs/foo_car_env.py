@@ -36,9 +36,9 @@ class FooCarEnv(gym.Env):
 
 	def __init__(self, no_graphics:bool=False, seed:int=1, **config):
 		self._config = config
-		worker_id = 0
-		if 'worker_id' in config:
-			worker_id = config['worker_id']
+		worker_id = config['worker_id'] if 'worker_id' in config else 0
+		# if 'worker_id' in config:
+		# 	worker_id = config['worker_id']
 		self._unity_env = UnityEnvironment(
 			file_name=UNITY_ENV_EXE_FILE,
 			# file_name=None, # Unity Editor Mode (debug)
@@ -111,7 +111,7 @@ class FooCarEnv(gym.Env):
 		ticker_start = config['ticker_start'] if 'ticker_start' in config else -3
 
 		xyz_mode = (path_space == space['xyz'])
-		basic_num = 6
+		basic_num = 9
 		point_dim = 3 if xyz_mode else 2
 
 		return basic_num + 2 * point_dim * (ticker_end - ticker_start + 1)
