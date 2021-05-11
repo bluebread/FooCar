@@ -48,4 +48,4 @@ env.close()
 ## NOTE
 
 1. In Linux platform without GUI, 'no_graphics' (one of parameters of gym.make) MUST be 'True'.
-2. In Vehicle enviroment, Friction & WindForce accidents DO NOT work at all. That is, 'LossControl' accident is the only accident that will affect the moving of the agent. 
+2. In Vehicle enviroment, Friction & WindForce accidents DO NOT work at all. That is, 'LossControl' accident is the only accident that will affect moving of the agent. 
