@@ -68,6 +68,8 @@ def parameters_testcase(config:dict):
 	# env = gym.make('foo_car:foo-vehicle-v0', no_graphics=False, **config)
 
 	for i_e in range(3):
+		current_time = time.time()
+		start_time = current_time
 		print(i_e)
 		obs = env.reset()
 		# print(0)
@@ -81,6 +83,8 @@ def parameters_testcase(config:dict):
 			print("\treward:", reward)
 			if done:
 				break
+		cur_time = time.time()
+		print('fps: %f' % (100 / (cur_time - start_time)))
 	env.close()
 
 config = {

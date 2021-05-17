@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Data/Managed/Assembly-CSharp.dll</key>
 		<data>
-		wlA5rnPFljn7S4NNQZrZyP5Cszc=
+		6jjgYthX0j/2c6u7AFrGjRN7sqU=
 		</data>
 		<key>Resources/Data/Managed/Google.Protobuf.dll</key>
 		<data>
@@ -458,15 +458,15 @@
 		</data>
 		<key>Resources/Data/globalgamemanagers</key>
 		<data>
-		HJRNYKI/tNuqyDTeTHQATKxK+H8=
+		G4rc6Ay+G6i2ojVnI06vuUdIaQE=
 		</data>
 		<key>Resources/Data/globalgamemanagers.assets</key>
 		<data>
-		RYIKkPOfQTCdsXm/s6d0ouvadNE=
+		IqvcDM6sU2M0PEdfAlOvcEZtoHo=
 		</data>
 		<key>Resources/Data/level0</key>
 		<data>
-		spccvR6rSLsQRgRPFXfTtTZkBsw=
+		3Bp9tWgIG0LkVyw44AaKaw3oZYo=
 		</data>
 		<key>Resources/Data/level0.resS</key>
 		<data>
@@ -482,7 +482,7 @@
 		</data>
 		<key>Resources/Data/sharedassets0.assets</key>
 		<data>
-		wFJKWCKKTXG1OnPKsX1gFIfZAtI=
+		EpJRXWAnW1OdnkIUAbhjP+SGK8c=
 		</data>
 		<key>Resources/Data/sharedassets0.assets.resS</key>
 		<data>
@@ -668,10 +668,10 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			olcR2IWRjzP4dAf07dhd2/oGtAM=
+			ve9kPVFGBY5NmUdOd3rYAx6+1Rc=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"a25711d885918f33f87407f4edd85ddbfa06b403"</string>
+			<string>cdhash H"bdef643d5146058e4d99474e777ad8031ebed517"</string>
 		</dict>
 		<key>PlugIns/libgrpc_csharp_ext.x64.bundle</key>
 		<dict>
@@ -686,7 +686,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EkEKXDqmOHlfh+1qj8EbwikcAKrqegGxxFBnxtiZDa8=
+			tJ7Qx9GhjitTz75bGKJWAIjxelkS3RvsCD8iVPVioSw=
 			</data>
 		</dict>
 		<key>Resources/Data/Managed/Google.Protobuf.dll</key>
@@ -1477,21 +1477,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zy+7yqkJ3vU8T6l40PjvI6ZevFZRyhe51b7GG64Tk+8=
+			mP5Zq/NH6stptGnm85uRkwW3723FdgvowWAQbBnMFhY=
 			</data>
 		</dict>
 		<key>Resources/Data/globalgamemanagers.assets</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tAVBENLt0HjLqc5L56BM0ly0iVceorHeoqvqrhOFDNk=
+			Qbxmrb8cmA1SXQVqlWU7w2xi6os3Gkh4xbILUaXmrM8=
 			</data>
 		</dict>
 		<key>Resources/Data/level0</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CoE1Ydda7iIlKdLSqnUO1nnU1sb+fJZaYTkFS8mscFQ=
+			9WQ3yizHHFDuahX1ERVynkE1FTw9qHSCm7hSt/GVCC4=
 			</data>
 		</dict>
 		<key>Resources/Data/level0.resS</key>
@@ -1519,7 +1519,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZwsR0/cJ/fLwDGGEuNyUlwxAl9TBWVeV2JX+03jSegs=
+			T5p8/51CR+m8MytZKWzPvEBrWM2S/Osl07Ze0H6Zm14=
 			</data>
 		</dict>
 		<key>Resources/Data/sharedassets0.assets.resS</key>
