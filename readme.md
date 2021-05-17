@@ -5,11 +5,11 @@ Installation:
 	$ git clone https://github.com/bluebread/FooCar.git
     $ pip install -e FooCar
 
-How to get the enviroment:
+How to get the environment:
 
 ```python
 import gym
-env = gym.make('foo_car:foo-v0')
+env = gym.make('foo_car:foo-ball-v0')
 ```
 
 Example:
@@ -48,4 +48,5 @@ env.close()
 ## NOTE
 
 1. In Linux platform without GUI, 'no_graphics' (one of parameters of gym.make) MUST be 'True'.
-2. In Vehicle enviroment, Friction & WindForce accidents DO NOT work at all. That is, 'LossControl' accident is the only accident that will affect moving of the agent. 
+2. In Vehicle environment, Friction & WindForce accidents DO NOT work at all. That is, 'LossControl' accident is the only accident that will affect moving of the agent. 
+3. You can press 'C' to enter FreeFlyCamera mode in Vehicle environment, and move your camera by WASD and mouse as in Ball environment.  
