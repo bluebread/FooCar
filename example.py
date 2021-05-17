@@ -64,8 +64,8 @@ def common_testcase():
 	env.close()
 
 def parameters_testcase(config:dict):
-	env = gym.make('foo_car:foo-ball-v0', no_graphics=False, **config)
-	# env = gym.make('foo_car:foo-vehicle-v0', no_graphics=False, **config)
+	env = gym.make('foo_car:foo-ball-v0', no_graphics=True, **config)
+	# env = gym.make('foo_car:foo-vehicle-v0', no_graphics=True, **config)
 
 	for i_e in range(3):
 		current_time = time.time()
